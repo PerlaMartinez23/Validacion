@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">Práctica Validación</h1>
+        <h2>Formulario de registro</h2>
+
+        <form action="" method="get">
+           
+            
+            <label for="user">Nombre de Usuario :</label> <br>
+            <input class="input" type="text" name="user" id="user" placeholder="Usuario" maxlength="15" required pattern="^[a-zA-Z0-9]{5,15}$" title="Debe tener entre 5 y 15 caracteres alfanuméricos"><br>
+
+     
+            <label for="pass">Password:</label> <br>
+            <input class="input" type="password" name="pass" id="pass" placeholder="Password" required maxlength="20" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una minúscula, un número y un carácter especial"><br>
+
+            
+            <label for ="emai">Email :</label> <br>
+            <input class="input" type="email" name="emai" id="emai" required placeholder="example@example.com" maxlength="75" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Debe ser una dirección de correo electrónico válida"><br>
+
+        
+            <label for ="tel">Telefono :</label> <br>
+            <input class="input" type="tel" name="tel" id="tel" placeholder="1234567890" required pattern="[0-9]{10}">
+
+          
+            <label for ="fch">Fecha de Nacimiento :</label> <br>
+            <input class="input" type="date" name ="fch" id ="fch" required pattern="\d{4}-\d{2}-\d{2}" title="Debe estar en el formato YYYY-MM-DD"><br>
+
+        
+            <label for ="zip">Código Postal :</label> <br>
+            <input class="input" type ="text" name ="zip" id ="zip" required pattern="\d{5}" title ="Debe consistir en exactamente 5 dígitos"><br>
+
+           
+            <input class="button" type ="submit"value ="Enviar">
+        </form>
+    </div>
+</body>
+</html>
